@@ -1,31 +1,29 @@
 # Usage
 
-Download folder "odoo-12-docker-compose" to your PC
+Download folder "odoo-12-docker-compose" to your PC then Open Terminal at same above folder path. 
 
-Open Terminal at folder path 
 
+# Folder Permission :
 Change the folder permission to make sure that the container is able to access the directory:
 ```
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 ```
-
+# Odoo Port
 Edit file docker-compose.yml and change Odoo port from 8071 to any un-use port or keep it.
-
 ```
 ports:
  - "8071:8069"
 ```
-# Custom addons
 
+# Custom addons
 The **addons** folder contains custom module. Just put your custom module if you have any.
 
-
+# Run Odoo Server
 For first time only run the following command to ensure the setup of new configuration:
 ```
 $ docker-compose config
 ```
-
 To start the container, execute this command:
 ```
 $ docker-compose up
