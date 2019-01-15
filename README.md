@@ -9,34 +9,35 @@ Change the folder permission to make sure that the container is able to access t
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 ```
-For first time run the following command to ensure the setup of new configuration:
-```
-$ docker-compose config
-```
 
-Start the container:
-```
-$ docker-compose up
-```
-
-* Then open `localhost:8071` to access Odoo 12.0. If you want to start the server with a different port, change **8071** to another value:
+Edit file docker-compose.yml and change Odoo port from 8071 to any un-use port or keep it.
 
 ```
 ports:
  - "8071:8069"
 ```
+# Custom addons
 
-* Log file is printed @ **etc/odoo-server.log**
+The **addons** folder contains custom module. Just put your custom module if you have any.
 
+
+For first time only run the following command to ensure the setup of new configuration:
+```
+$ docker-compose config
+```
+
+To start the container, execute this command:
+```
+$ docker-compose up
+```
 To run in detached mode, execute this command:
-
 ```
 $ docker-compose up -d
 ```
 
-# Custom addons
+# Odoo Logs
+* Log file is printed @ **etc/odoo-server.log**
 
-The **addons** folder contains custom addons. Just put your custom addons if you have any.
 
 # Odoo configuration
 
