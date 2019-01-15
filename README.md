@@ -1,6 +1,6 @@
 # Usage
 
-Download folder odoo-12-docker-compose to your PC
+Download folder "odoo-12-docker-compose" to your PC
 
 Open Terminal at folder path 
 
