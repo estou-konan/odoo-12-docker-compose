@@ -1,5 +1,7 @@
 # Usage
 
+Download folder odoo-12-docker-compose to your PC
+
 Change the folder permission to make sure that the container is able to access the directory:
 ```
 $ sudo chmod -R 777 addons
