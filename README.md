@@ -2,10 +2,16 @@
 
 Download folder odoo-12-docker-compose to your PC
 
+Open Terminal at folder path 
+
 Change the folder permission to make sure that the container is able to access the directory:
 ```
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
+```
+For first time run the following command to ensure the setup of new configuration:
+```
+$ docker-compose config
 ```
 
 Start the container:
