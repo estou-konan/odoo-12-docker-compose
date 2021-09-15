@@ -1,0 +1,66 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="etudiant_list_view">
+      <field name="name">etudiant list</field>
+      <field name="model">university.etudiant</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="first_name"/>
+          <field name="last_name"/>
+          <field name="sexe"/>
+          <field name="identity_card"/>
+          <field name="birthday"/>
+          <field name="inscription_date"/>
+        </tree> 
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+
+
+    <record model="ir.ui.view" id="etudiant_list_view">
+      <field name="name">etudiant form</field>
+      <field name="model">university.etudiant</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="first_name"/>
+          <field name="last_name"/>
+          <field name="sexe"/>
+          <field name="identity_card"/>
+          <field name="birthday"/>
+          <field name="inscription_date"/>
+          <field name="email"/>
+          <field name="phone"/>
+        </form> 
+      </field>
+    </record>
+   
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="etudiant_action_window">
+      <field name="name">etudiant window</field>
+      <field name="res_model">university.etudiant</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    
+    <menuitem name="university" id="university.menu_root"/>
+    <!-- menu categories -->
+    
+    <menuitem name="etudiant" id="university_etudiant_cat" parent="university.menu_root"/>   
+    <!--
+    <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>
+    -->
+    <!-- actions -->
+    
+    <menuitem name="Listes des etudiants" id="university_etudiant_list" parent="university_etudiant_cat"
+              action="etudiant_action_window"/>
+    <!--
+    <menuitem name="Server to list" id="university" parent="university.menu_2"
+              action="university.action_server"/>
+    -->
+  </data>
+</odoo>
